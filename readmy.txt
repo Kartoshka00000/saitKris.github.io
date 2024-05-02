@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Название вашего сайта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #305f43; /* Зеленый фон */
+            color: #ffffff;
+            position: relative; /* Добавлено для корректного позиционирования текста */
+        }
+        img {
+            width: 400px;
+            height: auto; /* Автоматическое определение высоты для сохранения пропорций */
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Высота вьюпорта */
+        }
+        
+        .left-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .right {
+            position: absolute;
+            bottom: 0;
+            left: calc(50% + 150px); /* Располагаем по центру по горизонтали */
+            transform: translateX(-50%);
+        }
+        
+        .top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .text1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .text2 {
+            font-size: 18px;
+        }
+        
+        
+        
+        header {
+            background-color: #305f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        nav {
+            background-color: #376953;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #2b684c;
+        }
+        
+        nav ul li a:hover {
+            background-color: #306848;
+        }
+        
+        nav ul li {
+            position: relative;
+        }
+        
+        nav ul li ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            z-index: 1;
+            padding: 10px;
+            width: 200px;
+        }
+        
+        nav ul li:hover ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            display: block;
+            white-space: nowrap;
+        }
+        
+        nav ul li ul li a {
+            display: block;
+            padding: 8px 20px;
+            color: #fcfffe;
+            text-decoration: none;
+        }
+        
+        nav ul li ul li:hover {
+            background-color: #ffffff;
+        }
+        
+          
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="B:\ПИКС\L8 p2\L8\menu\index.html">Рабочие листы</a>
+                <ul class="submenu">
+                    <li><a href="5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="8cl.html">8 класс</a></li>
+                </ul>
+            </li> <!-- Ссылка на главную страницу -->
+            <li>
+                <a href="#">Биография</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Видеоуроки</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Конспекты</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Онлайн-тренажеры</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        
+            <div class="container">
+                <div class="left-bottom">
+                    <img src="https://aif-s3.aif.ru/images/007/883/c77a38fb99787276265ba4e7893d16cb.jpg" alt="Image 1">
+                    <img src="https://gdb.rferl.org/E49B2197-AD29-4BA4-963E-037ABD7214BF_w1023_r1_s.jpg" alt="Image 2">
+                </div>
+                <div class="right">
+                    <img src="https://cs13.pikabu.ru/post_img/2023/03/25/7/1679741698156179306.jpg" alt="Image 3">
+                </div>
+                <div class="top-right">
+                    <img src="https://i.pinimg.com/736x/6f/de/7e/6fde7ef9f5832b5bf20ccfb681e46254.jpg" alt="Image 4">
+                </div>
+                <div class="overlay">
+                    <div class="text1">литературные шедевры</div>
+                    <div class="text2">в один клик</div>
+                </div>
+            </div>
+          
+    </main>
+</body>
+</html>
+
+
+ text-align: center;
+  transform: translate(-50%, -50%);
+
+  .overlay {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+background-color: rgba(48, 95, 67, 0) ;/* Прозрачный белый цвет для фона подменю */
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #305f43; /* Зеленый фон */
+    color: #ffffff;
+    position: relative; /* Добавлено для корректного позиционирования текста */
+}
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Высота вьюпорта */
+}
+
+/* Первое изображение (слева ниже середины) */
+.left-bottom img:nth-child(1) {
+    width: 250px; /* Ширина первого изображения */
+    height: auto;
+    position: absolute;
+    bottom: 300px; /* Отступ от нижнего края */
+    left: 275px; }
+
+/* Второе изображение (под первым) */
+.left-bottom img:nth-child(2) {
+    width: 250px; /* Ширина второго изображения */
+    height: auto;
+    position: absolute;
+    bottom: 150px; /* Отступ от первого изображения */
+    left: 275px; /* Отступ от левого края */
+}
+
+/* Третье изображение (правее от первых двух) */
+.right img {
+    width: 400px; /* Ширина третьего изображения */
+    height: auto;
+    position: absolute;
+    bottom: 150px; /* Отступ от нижнего края */
+    left: 550px; /* Отступ от левого края */
+}
+
+/* Четвертое изображение (правее и чуть выше третьего) */
+.top-right img {
+    width: 200px; /* Ширина четвертого изображения */
+    height: auto;
+    position: absolute;
+    top: 50px; /* Отступ от верхнего края */
+    right: 300px; /* Отступ от правого края */
+}
+
+.overlay {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.text1 {
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 100; /* Размещаем текст 1 сверху */
+    left: 30; /* Размещаем текст 1 слева */
+    font-size: 80px; 
+}
+
+.text2 {
+    position: absolute;
+    top: 100px; /* Отступ от верхнего края */
+    left: 30; /* Размещаем текст 2 слева */
+    font-size: 80px;
+}
+
+.overlay2 {
+    position: relative;
+    top: 70%;
+    right: 10%;
+    width: 100%;
+    z-index: 1;
+}
+
+.text3 {
+    position: absolute;
+    bottom: 0; /* Размещаем текст 3 внизу */
+    right: 100px; /* Размещаем текст 3 справа */
+    font-size: 80px;
+}
+
+.text4 {
+    position: absolute;
+    bottom: 100px; /* Отступ от нижнего края */
+    right: 100px; /* Размещаем текст 4 справа */
+    font-size: 80px;
+
+}
+header {
+    background-color: #305f43;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #376953;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li ul li:last-child {
+    margin-bottom: 5px; /* Добавляем отступ снизу для последней кнопки */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #2b684c;
+}
+
+nav ul li a:hover {
+    background-color: #306848;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    top: calc(100% - 1px); /* Поднять подменю на уровень родительского элемента */
+    left: 90;
+    display: none;
+    box-shadow: 0 2px 5px rgb(41, 73, 58); /* Добавляем тень для подменю */
+    border-radius: 10px; /* Закругляем углы подменю */
+    background-color: rgba(41, 65, 35, 8) ;/* Прозрачный белый цвет для фона подменю */
+    padding: 5px; /* Добавляем небольшие внутренние отступы для содержимого подменю */
+    z-index: 2;
+    padding: 10px;
+    width: 90px;
+    width: 135px; /* Ширина подменю */
+    border: none; /* Убираем границу у подменю */
+}
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 8px 12px;
+    color: #fcfffe;
+    text-decoration: none;
+    height: 20px; /* Фиксированная высота кнопки */
+    line-height: 20px; /* Выравнивание текста по вертикали в центре кнопки */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 14px; /* Размер шрифта */
+    width: 100px; /* Растягиваем кнопки по ширине подменю */
+
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение шрифта Poiret One через Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap">
+    <!-- Ваша таблица стилей -->
+    <link rel="stylesheet" href="B:\сайт крис\styles.css">
+
+    <title>Название вашего сайта</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Рабочие листы</a>
+                <ul class="submenu">
+                    <li><a href="B:\сайт крис\menu\worksheets\5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="B:\сайт крис\menu\worksheets\6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="B:\сайт крис\menu\worksheets\7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="B:\сайт крис\menu\worksheets\8cl.html">8 класс</a></li>
+                </ul>
+            </li> <!-- Ссылка на главную страницу -->
+            <li>
+                <a href="#">Биография</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="B:\сайт крис\menu\biography\5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="B:\сайт крис\menu\biography\6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="B:\сайт крис\menu\biography\7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="B:\сайт крис\menu\biography\8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Видеоуроки</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="B:\сайт крис\menu\video tutorials\5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="B:\сайт крис\menu\video tutorials\6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="B:\сайт крис\menu\video tutorials\7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="B:\сайт крис\menu\video tutorials\8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Конспекты</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="B:\сайт крис\menu\synopsis\5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="B:\сайт крис\menu\synopsis\6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="B:\сайт крис\menu\synopsis\7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="B:\сайт крис\menu\synopsis\8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Онлайн-тренажеры</a> <!-- Ссылка на раздел "Образовательные ресурсы" -->
+                <ul class="submenu">
+                    <li><a href="B:\сайт крис\menu\online simulators\5cl.html">5 класс</a></li> <!-- Ссылка на страницу "Методы и техники" -->
+                    <li><a href="B:\сайт крис\menu\online simulators\6cl.html">6 класс </a></li> <!-- Ссылка на страницу "История" -->
+                    <li><a href="B:\сайт крис\menu\online simulators\7cl.html">7 класс</a></li> <!-- Ссылка на страницу "Дополнительный материал" -->
+                    <li><a href="B:\сайт крис\menu\online simulators\8cl.html">8 класс</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        
+            <div class="container">
+                <div class="left-bottom">
+                    <img src="https://aif-s3.aif.ru/images/007/883/c77a38fb99787276265ba4e7893d16cb.jpg" alt="Image1">
+                    <img src="https://gdb.rferl.org/E49B2197-AD29-4BA4-963E-037ABD7214BF_w1023_r1_s.jpg" alt="Image 2">
+                </div>
+                <div class="right">
+                    <img src="https://i.pinimg.com/736x/6f/de/7e/6fde7ef9f5832b5bf20ccfb681e46254.jpg" alt="Image 3">
+                </div> 
+                <div class="top-right">
+                    <img src="https://cs13.pikabu.ru/post_img/2023/03/25/7/1679741698156179306.jpg" alt="Image 4">
+                </div>
+                <div class="overlay">
+                    <div class="text1">ЛИТЕРАТУРНЫЕ</div>
+                    <div class="text2">ШЕДЕВРЫ</div>
+                </div>
+                <div class="overlay2">
+                    <div class="text3">КЛИК</div>
+                    <div class="text4">В ОДИН</div>
+                </div>
+            </div>
+          
+    </main>
+</body>
+</html>
+
+
+ <main>
+        
+        <div class="container">
+            <div class="left-bottom">
+                <img src="https://aif-s3.aif.ru/images/007/883/c77a38fb99787276265ba4e7893d16cb.jpg" alt="Image1">
+                <img src="https://gdb.rferl.org/E49B2197-AD29-4BA4-963E-037ABD7214BF_w1023_r1_s.jpg" alt="Image 2">
+            </div>
+            <div class="right">
+                <img src="https://i.pinimg.com/736x/6f/de/7e/6fde7ef9f5832b5bf20ccfb681e46254.jpg" alt="Image 3">
+            </div> 
+            <div class="top-right">
+                <img src="https://cs13.pikabu.ru/post_img/2023/03/25/7/1679741698156179306.jpg" alt="Image 4">
+            </div>
+            <div class="overlay">
+                <div class="text1">ЛИТЕРАТУРНЫЕ</div>
+                <div class="text2">ШЕДЕВРЫ</div>
+            </div>
+            <div class="overlay2">
+                <div class="text3">КЛИК</div>
+                <div class="text4">В ОДИН</div>
+            </div>
+        </div>
+      
+</main>

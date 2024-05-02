@@ -1,0 +1,313 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5F7871; /* Зеленый фон */
+    color: #ffffff;
+    position: relative; /* Добавлено для корректного позиционирования текста */
+}
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Высота вьюпорта */
+}
+
+/* Первое изображение (слева ниже середины) */
+.left-bottom img:nth-child(1) {
+    width: 200px; /* Ширина первого изображения */
+    height: auto;
+    position: absolute;
+    bottom: 370px; /* Отступ от нижнего края */
+    left: 370px; }
+
+/* Второе изображение (под первым) */
+.left-bottom img:nth-child(2) {
+    width: 200px; /* Ширина второго изображения */
+    height: auto;
+    position: absolute;
+    bottom: 220px; /* Отступ от первого изображения */
+    left: 370px; /* Отступ от левого края */
+}
+
+/* Третье изображение (правее от первых двух) */
+.right img {
+    width: 350px; /* Ширина третьего изображения */
+    height: auto;
+    position: absolute;
+    bottom: 220px; /* Отступ от нижнего края */
+    left: 600px; /* Отступ от левого края */
+}
+
+/* Четвертое изображение (правее и чуть выше третьего) */
+.top-right img {
+    width: 200px; /* Ширина четвертого изображения */
+    height: auto;
+    position: absolute;
+    top: 50px; /* Отступ от верхнего края */
+    right: 300px; /* Отступ от правого края */
+}
+
+.overlay {
+    position: relative;
+    top: 2%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+}
+
+.text1 {
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 100; /* Размещаем текст 1 сверху */
+    left: 40; /* Размещаем текст 1 слева */
+    font-size: 65px; 
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+}
+
+.text2 {
+    position: absolute;
+    top: 100px; /* Отступ от верхнего края */
+    left: 40; /* Размещаем текст 2 слева */
+    font-size: 65px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+}
+
+.overlay2 {
+    position: relative;
+    top: 62%;
+    right: 19%;
+    width: 100%;
+    z-index: 1;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+}
+
+.text3 {
+    position: absolute;
+    bottom: 0; /* Размещаем текст 3 внизу */
+    right: 100px; /* Размещаем текст 3 справа */
+    font-size: 65px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+}
+
+.text4 {
+    position: absolute;
+    bottom: 100px; /* Отступ от нижнего края */
+    right: 25px; /* Размещаем текст 4 справа */
+    font-size: 65px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold
+
+}
+header {
+    background-color: #5F7871;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #5F7871;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    margin-bottom: 10px; /* Отступ снизу для линии */
+}
+
+
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Добавлено для позиционирования линии */
+    
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.underline {
+    position: absolute;
+    bottom: -2px; /* Расположение линии под текстом */
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: width 0.3s ease; /* Анимация изменения ширины */
+}
+
+li:hover .underline {
+    width: 100%; /* Показывать линию при наведении */
+}
+
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li ul li:last-child {
+    margin-bottom: 5px; /* Добавляем отступ снизу для последней кнопки */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #5F7871;
+}
+
+nav ul li a:hover {
+    background-color: #5F7871;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    top: calc(100% - 1px); /* Поднять подменю на уровень родительского элемента */
+    left: 90;
+    display: none;
+    box-shadow: 0 2px 5px rgb(41, 73, 58); /* Добавляем тень для подменю */
+    border-radius: 10px; /* Закругляем углы подменю */
+    background-color: rgba(41, 65, 35, 8) ;/* Прозрачный белый цвет для фона подменю */
+    padding: 5px; /* Добавляем небольшие внутренние отступы для содержимого подменю */
+    z-index: 2;
+    padding: 10px;
+    width: 90px;
+    width: 135px; /* Ширина подменю */
+    border: none; /* Убираем границу у подменю */
+}
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 8px 12px;
+    color: #fcfffe;
+    text-decoration: none;
+    height: 20px; /* Фиксированная высота кнопки */
+    line-height: 20px; /* Выравнивание текста по вертикали в центре кнопки */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 14px; /* Размер шрифта */
+    width: 100px; /* Растягиваем кнопки по ширине подменю */
+
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #5F7871;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 2px solid #ffffff; /* Черная обводка */
+}
+
+.button:hover {
+    background-color: #5F7871;
+}
+
+.bioi {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Высота вьюпорта */
+}
+
+/* Первое изображение (слева ниже середины) */
+.bio1 img:nth-child(1) {
+    width: 200px; /* Ширина первого изображения */
+    height: auto;
+    position: absolute;
+    bottom: 370px; /* Отступ от нижнего края */
+    left: 370px; }
+
+/* Второе изображение (под первым) */
+.bio2 img:nth-child(2) {
+    width: 200px; /* Ширина второго изображения */
+    height: auto;
+    position: absolute;
+    bottom: 220px; /* Отступ от первого изображения */
+    left: 370px; /* Отступ от левого края */
+}
+
+.overlay3 {
+    display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+            box-sizing: border-box;
+}
+
+.text5 {
+    width: 40%;
+            margin-right: 20px;
+            text-align: right;
+            font-size: 24px;
+}
+
+.text6 {
+    margin-top: 20px;
+    font-size: 18px;
+}
